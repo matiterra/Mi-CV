@@ -1,24 +1,23 @@
+/* Estilos generales */
 body {
     font-family: "Arial", "Helvetica", sans-serif;
     color: #000;
     word-wrap: break-word;
 }
 
-
 #home {
-    text-align: left; 
-    margin-left: 0; 
-    padding-left: 20px; 
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
 }
-
 
 h1 {
     font-size: 1.3rem;
 }
 
 .container {
-    max-width: 975px; 
-    margin: 0 auto; 
+    max-width: 975px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -30,7 +29,6 @@ h3 {
     font-weight: bold;
     font-size: 1.5rem;
 }
-
 
 h2 {
     font-size: 2rem;
@@ -44,9 +42,9 @@ h4 {
 p {
     font-size: 1rem;
     line-height: 1.5;
-    hyphens: auto; 
-    overflow-wrap: break-word; 
-    text-align: justify; 
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-align: justify;
 }
 
 .nav-link {
@@ -59,18 +57,18 @@ p {
 }
 
 .contacto-link {
-    padding-left: 0; 
+    padding-left: 0;
 }
 
 nav.navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; 
-    height: 100vh; 
+    width: 250px;
+    height: 100vh;
     background-color: #f8f9fa;
-    border-right: 1px solid #e0e0e0; 
-    overflow-y: auto; 
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
 }
 
 .navbar ul {
@@ -82,8 +80,6 @@ nav.navbar {
     margin-left: 0;
     text-align: left;
 }
-
-
 
 .card img {
     height: 180px;
@@ -102,15 +98,15 @@ nav.navbar {
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -2px; 
-    top: 20px; 
+    left: -2px;
+    top: 20px;
     width: 2px;
     height: 122%;
     background-color: #000;
 }
 
 .timeline-item:last-child::before {
-    display: none; 
+    display: none;
 }
 
 .timeline-dot {
@@ -127,7 +123,6 @@ nav.navbar {
     padding-left: 20px;
 }
 
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -142,7 +137,6 @@ nav.navbar {
 .footer p {
     margin: 5px 0;
 }
-
 
 .button-group {
     display: flex;
@@ -183,7 +177,6 @@ nav.navbar {
     color: #fff;
 }
 
-
 #projects h2 {
     text-align: left;
     font-weight: bold;
@@ -200,7 +193,7 @@ nav.navbar {
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efecto de elevación */
+    transform: translateY(-5px);
 }
 
 .card-title {
@@ -210,7 +203,6 @@ nav.navbar {
 .card-text {
     color: #555;
 }
-
 
 .project-list {
     display: flex;
@@ -228,7 +220,6 @@ nav.navbar {
     background-color: #f9f9f9;
     transition: transform 0.3s ease;
     margin-bottom: 20px;
-    
 }
 
 .project-item:hover {
@@ -255,13 +246,12 @@ nav.navbar {
 }
 
 .project1 .project-title {
-    margin-left: -294px; /* Ajusta según sea necesario */
+    margin-left: -294px;
 }
 
 .project2 .project-title {
-    margin-left: -224px; /* Ajusta según sea necesario */
+    margin-left: -224px;
 }
-
 
 .project-description {
     margin-top: 5px;
@@ -277,8 +267,59 @@ nav.navbar {
     margin-left: 10px;
 }
 
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
 
-.project-description {
-    margin-top: 5px;
-    color: #555;
+    nav.navbar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .navbar .nav-item {
+        margin-bottom: 0;
+    }
+
+    .navbar .mt-auto {
+        margin-top: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project1 .project-title,
+    .project2 .project-title {
+        margin-left: 0;
+    }
+
+    .project-details {
+        text-align: center;
+    }
 }
