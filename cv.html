@@ -179,5 +179,36 @@
         <p>© 2025 - Mati Terranova</p>
         <p><strong>Website Template </strong>developed by <strong>Mati Terranova ⚡</strong></p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+            links.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active-link');
+                }
+        
+                link.addEventListener('click', function () {
+                    links.forEach(item => item.classList.remove('active-link'));
+                    this.classList.add('active-link');
+                    sessionStorage.setItem('activeLink', this.getAttribute('href'));
+                });
+            });
+        
+            const activeLink = sessionStorage.getItem('activeLink');
+            if (activeLink) {
+                const activeElement = document.querySelector(`.nav-link[href="${activeLink}"]`);
+                if (activeElement) {
+                    activeElement.classList.add('active-link');
+                }
+            }
+        });
+            </script>
+
+
+
+
 </body>
 </html>
