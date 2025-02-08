@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mati - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Barra lateral -->
+        <nav class="navbar bg-light flex-column p-4" style="min-width: 250px; min-height: 100vh;">
+            <div class="text-center mb-4">
+                <img src="img/fotocv.png" class="rounded-circle" alt="Foto de perfil" width="120">
+            </div>
+            <ul class="nav flex-column mb-5">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="proyects.html">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item">
+                    <a class="nav-link contacto-link" href="mailto:matiterranova1775@gmail.com?subject=Interesado en tus servicios&body=Hola Mati,%0A%0AQuisiera hablar contigo sobre...%0A" target="_blank">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+            <div class="mt-auto text-center">
+                <a href="https://github.com/matiterra" class="me-3"><img src="img/icons8-github-50.png" width="30" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/mat%C3%ADas-terranova-763983161/"><img src="img/icons8-linkedin-50.png" width="30" alt="LinkedIn"></a>
+            </div>
+        </nav>
+
+                <!-- Sección de proyectos -->
+                <section id="projects" class="mb-5 container">
+                    <h2 class="mb-4 text-start" style="margin-top: 50px;">Algunos Proyectos Académicos</h2>
+
+                
+                    
+                    <a href="https://www.notion.so/Testing-de-Aplicaciones-19430b533b8380669873feeb51f1bf4d" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="project-item d-flex align-items-center mb-4" style="border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
+                        <img src="img/resized_image_2.png" alt="Proyecto 3" class="project-image me-3" style="width: 150px; height: auto; object-fit: cover;">
+                        <div class="project-details">
+                            <h3 class="project-title">Testing de Aplicaciones<span class="badge bg-success">SUBIDO</span></h3>
+                            <p class="project-description">Proyecto basado en crear casos de prueba de front end de una página de prueba y automatizar algunos de esos TCs.</p>
+                        </div>
+                    </div>
+                    </a>
+                
+                    
+                    <a href="https://github.com/daanimelian/TPI-Disenio-Web" target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="project-item d-flex align-items-center mb-4" style="border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
+                            <img src="img/resized_image_1.png" alt="Proyecto 4" class="project-image me-3" style="width: 150px; height: auto; object-fit: cover;">
+                            <div class="project-details">
+                                <h3 class="project-title">Diseño y Desarrollo Web<span class="badge bg-success">SUBIDO</span></h3>
+                                <p class="project-description">Proyecto basado en realizar la página de una hamburguesería utilizando HTML, CSS, JS, Boostrap y JQuery.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    
+                    <a href="https://www.notion.so/Sistemas-de-Informaci-n-II-19430b533b8380468451c8e8ce322dad" target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="project-item d-flex align-items-center mb-4" style="border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
+                            <img src="img/resized_image_4.png" alt="Proyecto 4" class="project-image me-3" style="width: 150px; height: auto; object-fit: cover;">
+                            <div class="project-details">
+                                <h3 class="project-title">Sistemas de Información II<span class="badge bg-success">SUBIDO</span></h3>
+                                <p class="project-description">Proyecto basado realizar los requerimientos funcionales y no funcionales para una aplicación de hospital, teniendo un fuerte sentido por los Stake Holders.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    
+                    <a href="https://github.com/matiterra/proyectoprogra1uade" target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="project-item d-flex align-items-center mb-4" style="border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
+                            <img src="img/resized_image_3.png" alt="Proyecto 4" class="project-image me-3" style="width: 150px; height: auto; object-fit: cover;">
+                            <div class="project-details">
+                                <h3 class="project-title">Programación con Python<span class="badge bg-success">SUBIDO</span></h3>
+                                <p class="project-description">Proyecto basado en el clásico juego del crucigrama llamado "CruxyUade", en dónde se muestra el tablero por consola.</p>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+                
+        </div>
+    </div>
+
+
+    <footer class="footer mt-5">
+        <p>© 2025 - Mati Terranova</p>
+        <p><strong>Website Template </strong>developed by <strong>Mati Terranova ⚡</strong></p>
+    </footer>
+    
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+    
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(item => item.classList.remove('active-link'));
+                this.classList.add('active-link');
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

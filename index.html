@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mati - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Barra lateral -->
+        <nav class="navbar bg-light flex-column p-4" style="min-width: 250px; min-height: 100vh;">
+            <div class="text-center mb-4">
+                <img src="img/fotocv.png" class="rounded-circle" alt="Foto de perfil" width="120">
+            </div>
+            <ul class="nav flex-column mb-5">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="proyects.html">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item">
+                    <a class="nav-link contacto-link" href="mailto:matiterranova1775@gmail.com?subject=Interesado en tus servicios&body=Hola Mati,%0A%0AQuisiera hablar contigo sobre...%0A" target="_blank">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+            <div class="mt-auto text-center">
+                <a href="https://github.com/matiterra" class="me-3"><img src="img/icons8-github-50.png" width="30" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/mat%C3%ADas-terranova-763983161/"><img src="img/icons8-linkedin-50.png" width="30" alt="LinkedIn"></a>
+            </div>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="container p-5">
+            <!-- Sección de bienvenida -->
+            <section id="home" class="mb-5 text-center">
+                <section id="home" class="mb-5 text-left">
+                    <h1>¡Buenas! 👋</h1>
+                    <h2>Soy Matias Terranova</h2>
+                    <h3>QA Manual & Automation</h3>
+                    <p class="lead">Trabajo hace varios años en el aseguramiento de calidad del software. Soy estudiante de Licenciatura en Sistemas en la UADE. Apasionado por la música y amante de los gatos, combino mi curiosidad y dedicación tanto en el ámbito profesional como en mis intereses personales.</p>
+                    <!-- Botones -->
+                    <div class="button-group">
+                    <a href="mailto:matiasterranova1775@gmail.com?subject=Interesado en tus servicios&body=Hola Mati,%0A%0AQuisiera hablar contigo sobre..." class="btn btn-black">Contacto</a>
+                    <a href="https://www.linkedin.com/in/mat%C3%ADas-terranova-763983161/" target="_blank" class="btn btn-outline">Agregame!</a>
+                    </div>
+                </section>
+
+
+                <!-- Sección de proyectos -->
+                <section id="projects" class="mb-5">
+                    <h2 class="mb-4 text-start">Mis Proyectos personales</h2>
+                    <div class="project-item">
+                        <img src="img/ReconocerGatos.png" alt="Proyecto 1" class="project-image">
+                        <div class="project-details project1">
+                            <h3 class="project-title">Reconocedor de Gatos <span class="badge">EN DESARROLLO</span></h3>
+                            <p class="project-description">Proyecto basado en reconocer a mis gatos (Akira y Lucy) a través de mi cámara frontal web.</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/matiterra/IA-Loldle-/tree/master" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="project-item">
+                        <img src="img/Aatrox.png" alt="Proyecto 2" class="project-image">
+                        <div class="project-details project2">
+                            <h3 class="project-title">Reconocedor de Campeones de LoL <span class="badge bg-success">SUBIDO</span>
+                            </h3>
+                            <p class="project-description">Proyecto basado en el entrenamiento de una IA que pueda reconocer el campeón de LoL que se le muestra en pantalla.</p>
+                        </div>
+                    </div>
+                    </a>
+                    
+                </section>
+
+
+
+        </div>
+    </div>
+
+
+    <footer class="footer mt-5">
+        <p>© 2025 - Mati Terranova</p>
+        <p><strong>Website Template </strong>developed by <strong>Mati Terranova ⚡</strong></p>
+    </footer>
+    
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+    
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(item => item.classList.remove('active-link'));
+                this.classList.add('active-link');
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
